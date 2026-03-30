@@ -1,0 +1,24 @@
+{
+    "name": "Game",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Cinemachine",
+        "Unity.InputSystem",
+        "Unity.TextMeshPro",
+        "Fusion.Unity",
+        "Fusion.Runtime",
+        "Unity.Fusion.CodeGen",
+        "Fusion.Unity.Editor",
+        "UnityEditor.TestRunner",
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
