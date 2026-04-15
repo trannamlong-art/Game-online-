@@ -1,6 +1,7 @@
 ﻿using Fusion;
 using UnityEngine;
 
+[DefaultExecutionOrder(-1000)]
 public class RunnerSetup : MonoBehaviour
 {
     void Awake()
@@ -12,6 +13,13 @@ public class RunnerSetup : MonoBehaviour
     }
 
     runner.ProvideInput = true;
+
+    var bootstrap = FindAnyObjectByType<FusionBootstrap>();
+    if (bootstrap != null)
+    {
+        bootstrap.StartMode = FusionBootstrap.StartModes.Automatic;
+        bootstrap.AutoStartAs = GameMode.Shared;
+    }
 
     var playerInputHandler = GetComponent<PlayerInputHandler>();
     var networkInputHandler = GetComponent<NetworkInputHandler>();

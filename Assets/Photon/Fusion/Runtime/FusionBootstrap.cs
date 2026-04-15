@@ -195,6 +195,10 @@ namespace Fusion {
 
     protected virtual void Start() {
 
+      // Force runtime startup mode for this project: skip mode selection UI and start Shared directly.
+      StartMode = StartModes.Automatic;
+      AutoStartAs = GameMode.Shared;
+
       if (_initialScenePath == null) {
         if (string.IsNullOrEmpty(InitialScenePath)) {
           var currentScene = SceneManager.GetActiveScene();
